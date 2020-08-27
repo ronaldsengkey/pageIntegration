@@ -1,0 +1,36 @@
+.hideElement{
+    display:none;
+}
+.displayElement{
+    display: block;
+}
+.modalDefault{
+    position:fixed;background:rgba(0,0,0,0.6);width:100%;height:100%;z-index:1035;padding:3%;
+    display:none;
+}
+.modalDefault > .content-modal{
+    width:65%;
+    margin:0px auto;
+    background:#f5f5f5;
+}
+#subWrapContent{
+    width:100%;
+    max-height:900px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    padding:2%;
+}
+#subWrapContent::-webkit-scrollbar {
+    width: 1em !important;
+}
+#subWrapContent::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3) !important;
+}
+#subWrapContent::-webkit-scrollbar-thumb {
+  background-color: darkgrey !important;
+  outline: 1px solid slategrey !important;
+}
+
+#imageBg {
+    background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);
+}

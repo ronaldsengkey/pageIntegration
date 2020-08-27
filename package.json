@@ -1,0 +1,71 @@
+{
+    "name": "ultipayLogin",
+    "version": "1.0.0",
+    "description": "Ultipay Login",
+    "directories": {
+        "test": "test"
+    },
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon server.js monitor-dashboard"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/chawk/bayside.git"
+    },
+    "author": "Ronald Sengkey",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/chawk/bayside/issues"
+    },
+    "homepage": "https://github.com/chawk/bayside#readme",
+    "dependencies": {
+        "@guivic/fastify-socket.io": "^0.1.1",
+        "@types/fastify-static": "^0.14.0",
+        "bootstrap": "^4.5.0",
+        "cors": "^2.8.5",
+        "cryptr": "^6.0.1",
+        "fastify": "^2.10.0",
+        "fastify-healthcheck": "^2.1.0",
+        "fastify-helmet": "^3.0.2",
+        "fastify-multipart": "^2.0.3",
+        "fastify-static": "^2.5.1",
+        "gulp": "^4.0.2",
+        "gulp-clean-css": "^4.2.0",
+        "gulp-sass": "^4.1.0",
+        "gulp-uglify": "^3.0.2",
+        "helmet": "^3.21.2",
+        "jsonwebtoken": "^8.5.1",
+        "mdbootstrap": "^4.19.1",
+        "monitor": "^0.6.10",
+        "monitor-dashboard": "^0.6.7",
+        "node-rsa": "^1.0.8",
+        "nodemon": "^2.0.4",
+        "os-utils": "0.0.14",
+        "pino": "^5.13.6",
+        "readable-stream": "^3.4.0",
+        "redis": "^2.8.0",
+        "redux": "^4.0.4",
+        "request": "^2.88.0",
+        "sass": "^1.26.10",
+        "socket.io": "^2.3.0",
+        "socket.io-client": "^2.3.0",
+        "under-pressure": "^3.1.0"
+    },
+    "devDependencies": {
+        "autoprefixer": "^9.7.4",
+        "css-mqpacker": "^7.0.0",
+        "cssnano": "^4.1.10",
+        "gulp-livereload": "^4.0.2",
+        "gulp-notify": "^3.2.0",
+        "gulp-postcss": "^8.0.0",
+        "postcss-automath": "^1.0.1",
+        "precss": "^4.0.0",
+        "sort-css-media-queries": "^1.5.0"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 4 versions"
+    ]
+}

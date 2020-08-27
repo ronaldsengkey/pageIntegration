@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Ultipay Dashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+    <link rel="stylesheet" href="/public/assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="/public/assets/css/mdbootstrap.css" />
+    <link rel="stylesheet" href="public/assets/css/custom.css" />
+</head>
+
+<body>
+    <div class="modal fade right" id="modalBottomRight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        data-backdrop="true" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-side modal-bottom-right modal-notify" id="modalContainer"
+            role="document">
+            <div class="modal-content">
+                <div class="modal-header px-4 z-depth-0">
+                    <h5 class="modal-title"><b>Forgot Password</b></h5>
+                    <button type="button" class="close closeFP" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mainContent" class="vh-100 row m-0">
+        <div class="col-5 landing-left vh-100 p-5">
+            <img src="public/assets/img/main-img.png" class="main-img" />
+            <div class="d-flex flex-column align-items-start justify-content-between py-4 h-100">
+                <div class="my-3">
+                    <h1 class="font-weight-bold text-white mb-3">Ultimate<br />Launch faster</h1>
+                    <h5 class="text-white pr-5 mr-5">Fast. Easy. Secure.</h5>
+                </div>
+                <div class="ultimate-apps d-flex justify-content-center w-100">
+                    <p class="m-0 py-1 px-3 mr-3 cursor-pointer text-white text-center" onclick="getPage(this)" data-target="login" data-app="partner"><i class="fas fa-handshake"></i><span class="d-block mt-2">Partner</span></p>
+                    <p class="m-0 py-1 px-3 mr-3 cursor-pointer text-white text-center" onclick="getPage(this)" data-target="login" data-app="finance"><i class="fas fa-chart-area"></i><span class="d-block mt-2">Finance</span></p>
+                    <p class="m-0 py-1 px-3 mr-3 cursor-pointer text-white text-center" onclick="getPage(this)" data-target="login" data-app="marketing"><i class="fas fa-bullhorn"></i><span class="d-block mt-2">Marketing</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-7 vh-100 d-flex flex-column align-items-center justify-content-between">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent justify-content-between w-100 px-3 py-4 shadow-none">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item pl-0 pr-3 nav-apps dropdown">
+                        <a class="nav-link dropdown-toggle p-0 d-flex align-items-center justify-content-center" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-h"></i></a>
+                        <div class="dropdown-menu shadow border-0" aria-labelledby="navbarDropdownMenuLink">
+                            <p class="dropdown-item m-0 px-4 py-2 cursor-pointer d-block">Partner</p>
+                            <p class="dropdown-item m-0 px-4 py-2 cursor-pointer d-block">Finance</p>
+                            <p class="dropdown-item m-0 px-4 py-2 cursor-pointer d-block">Marketing</p>
+                        </div>
+                    </li>
+                    <!-- <li class="nav-item px-3">
+                        <a class="nav-link text-black-50" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link text-black-50" href="#">About Us</a>
+                    </li> -->
+                </ul>
+                <h5 class="d-flex align-items-center m-0">
+                    <img src="public/assets/img/ultipay_logo.png" height="32" class="d-block mr-2" />
+                    Ultimate
+                </h5>
+            </nav>
+
+            <div class="d-flex align-items-center justify-content-center flex-grow-1 w-100">
+                <div class="container-login">
+                    <div class="d-flex justify-content-center">
+                        <div class="spinner-border" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.9/js/mdb.min.js">
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script type="text/javascript" src="public/assets/js/auth.js"></script>
+    <script type="text/javascript" src="public/assets/js/functions.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+/* Colors */
+$orange-ultipay: #ff8a00;
+$custom-grey: #f0f0f0;
+$custom-grey-text: #666666;
+$font-def: #474747;
+$font-grey: #747b84;
+$blue: #007bff !default;
+$black: #000 !default;
+
+/* Shadows */
+$container-shadow: 0 1px 1px 0 rgba(0, 0, 0, .15);
+$box-shadow: 0 .5rem 1rem rgba($black, .06) !default;
+
+/* Mixin */
+@mixin form-auth {
+    width: 100%;
+    max-width: 35rem;
+    input {
+        border: 0;
+        padding: 1rem .8rem;
+        background: #FFF;
+        letter-spacing: .07rem;
+        &::placeholder {
+            color: rgba(0, 0, 0, .5);
+        }
+        &:focus {
+            &::placeholder {
+                color: rgba(0, 0, 0, .75);
+            }
+        }
+    }
+    .btn {
+        font-size: 1rem;
+        text-transform: inherit;
+    }
+}
+
+@mixin cursor-pointer {
+    cursor: pointer;
+}
+
+@mixin link {
+    color: $blue;
+    &:hover {
+        color: darken($blue, 15%);
+        text-decoration: underline;
+    }
+}

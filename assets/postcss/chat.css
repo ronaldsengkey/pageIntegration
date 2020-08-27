@@ -1,0 +1,181 @@
+@keyframes example {
+	to {
+		background-color: #E91E63;
+	}
+}
+@keyframes blink {
+	0% {
+		background: #ff8f00;
+	}
+	50% {
+		background: #ffb300;
+	}
+	100% {
+		background: #ff8f00;
+	}
+}
+
+.chat-area {
+	position: fixed;
+	display: flex;
+	overflow: hidden;
+	z-index: 999;
+	bottom: 0;
+	right: 0;
+	max-width: 100%;
+	pointer-events: none;
+	align-items: flex-end !important;
+	ul.chat-ul {
+		padding: 0 10px;
+		margin: 0;
+		> li {
+			position: relative;
+			list-style: none;
+			display: block;
+			margin: 10px 0 20px;
+			padding: 0 0 5px;
+			transition: 0.5s all;
+			&:after {
+				display: table;
+				content: '';
+				clear: both;
+			}
+		}
+	}
+	.load-loading {
+	}
+	.chat-notif {
+		animation: blink 1s linear infinite;
+	}
+	div {
+		pointer-events: all;
+	}
+	.chat-container {
+		margin-left: 16px;
+		width: 100%;
+		max-width: 280px;
+		.card-body {
+			overflow-y: auto;
+			padding: 0 !important;
+			max-height: 400px;
+		}
+	}
+	.online-list {
+		line-height: 1.2;
+		&:hover {
+			background: rgba(0, 0, 0, 0.02);
+		}
+	}
+}
+
+#media-modal-file.w-1024 {
+	width: 100% !important;
+	max-width: 1024px !important;
+}
+
+@media (max-width: 1152px) {
+	.chat-area {
+		.chat-container {
+			width: auto;
+		}
+	}
+}
+
+#online-chat {
+	margin-left: 16px;
+	width: 280px;
+}
+
+#viewport {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+}
+
+$msg-border-radius: 2px;
+$padding-msg: 7px 10px;
+$send-padding-right: 50px;
+
+.chat-area {
+	.msg {
+		max-width: 90%;
+		padding: $padding-msg;
+		line-height: 1.2;
+		font-size: 13px;
+		border-radius: 14px;
+		word-break: break-all;
+		overflow: hidden;
+		text-align: left;
+		&.him {
+			float: left;
+			border-bottom-left-radius: $msg-border-radius;
+			> span {
+				&.time {
+					text-align: left;
+				}	
+			}
+		}
+		&.you {
+			float: right;
+			border-bottom-right-radius: $msg-border-radius;
+			> span {
+				&.time {
+					text-align: right;
+				}	
+			}
+		}
+		&.load {
+			border-bottom-left-radius: $msg-border-radius;
+		}
+		> span {
+			position: absolute;
+			&.partner {
+			}
+			&.time {
+				font-size: 10px;
+				top: 100%;
+				left: 0;
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+	.sendBox {
+		width: 100%;
+		background: white;
+		border-top: 1px solid #e0e0e0;
+		position: relative;
+		.send-input {
+			padding-right: $send-padding-right;
+			&::placeholder {
+				color: rgba(0, 0, 0, 0.5);
+			}
+		}
+		.btn-send {
+			cursor: pointer;
+			font-size: large;
+			position: absolute;
+			width: $send-padding-right;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			i {
+				color: rgba(0, 0, 0, 0.5);
+			}
+			&:hover i {
+				color: #0277bd;
+			}
+		}	
+	}
+	.message img {
+		min-width: 12px;
+	}
+}
+
+.w-content {
+	width: max-content;
+}
+#media-modal-file img {
+	min-width: 120px;
+}

@@ -1,0 +1,28 @@
+@import '../variables';
+
+.cursor-pointer {
+    @include cursor-pointer;
+}
+
+.link {
+    @include link;
+}
+
+.container-login {
+    @include form-auth;
+    .title-text {
+        h1 {
+            display: none;
+        }
+        h3 {
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 1.8rem;
+            font-family: inherit;
+        }
+    }    
+    .title-img {
+        display: block;
+        width: 7.2rem;
+    }    
+}

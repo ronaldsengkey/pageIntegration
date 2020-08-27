@@ -1,0 +1,33 @@
+@import '../variables';
+
+//** Global text color on `<body>`.
+$body-color: $font-def;
+
+/* Colors */
+$gray-200: $custom-grey;
+$gray-700: $custom-grey-text;
+
+// $blue: #6ec9cc;
+// $indigo: #6574cd;
+// $purple: #9561e2;
+// $pink: #f66d9b;
+// $red: #ae201f;
+// $orange: #f6993f;
+// $yellow: #f4a735;
+// $green: #0e867c;
+// $teal: #25b44a;
+// $cyan: #6cb2eb;
+// $light: #f8f9fa;
+
+/* Grid breakpoints */
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1300px,
+) !default;
+
+/* Table */
+$table-accent-bg: $custom-grey;
