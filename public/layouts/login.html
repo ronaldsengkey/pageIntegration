@@ -8,11 +8,39 @@
 </div>
 
 <div id="onKeyPress" class="my-5 py-3">
-    <input type="text" id="email" class="rounded font-weight-light w-100 mb-4 shadow" value="admin3@usahakreatif.co.id" placeholder="Email" autocomplete="off" />
-    <input type="password" id="password" class="rounded font-weight-light w-100 mb-4 shadow" value="admin123" placeholder="Password" />
+    <input type="text" id="email" class="rounded font-weight-light w-100 mb-4 shadow" value="admin3@usahakreatif.co.id"
+        placeholder="Email" autocomplete="off" />
+    <div class="forgot mb-4 shadow rounded bg-white d-flex align-items-center">
+        <input type="password" id="password" class="rounded font-weight-light m-0 flex-grow-1" value="admin123"
+            placeholder="Password" />
+        <p class="btn-forgot px-3 m-0 link cursor-pointer" data-toggle="modal" data-target="#forgotModal">Forgot?</p>
+    </div>
 </div>
 
-<div class="mb-3 d-flex align-items-center justify-content-between">
+<div class="mb-3 d-flex flex-column flex-md-row align-items-stretch align-items-md-center justify-content-between">
     <button id="login" class="btn btn-dark rounded m-0 font-weight-normal shadow waves-effect">Sign In</button>
-    <p class="m-0">Don't have an account? <span class="cursor-pointer link" onclick="getPage(this)" data-target="register">Register</span></p>
+    <p class="m-0 mt-4 mt-md-0">Don't have an account? <span class="cursor-pointer link" onclick="getPage(this)"
+            data-target="register">Register</span></p>
+</div>
+
+<div class="modal fade" id="forgotModal" tabindex="-1" role="dialog" aria-labelledby="forgotModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content bg-body">
+            <div class="modal-header">
+                <h6 class="modal-title" id="forgotModalLabel">Forgot your password?</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body py-4">
+                <h4 class="m-0 font-weight-bold">Don't worry, we got you.</h4>
+                <p>Enter the email address associated with your account.</p>
+                <input type="text" id="email" class="rounded font-weight-light w-100 mb-4 shadow" placeholder="Your email" autocomplete="off" />        
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark rounded m-0 font-weight-normal shadow waves-effect">Reset Password</button>
+            </div>
+        </div>
+    </div>
 </div>

@@ -9,11 +9,16 @@ const autoprefixer = require('autoprefixer');
 const notify = require('gulp-notify');
 const livereload = require('gulp-livereload');
 const sass = require('gulp-sass');
+const rfs = require('rfs');
 
 gulp.task('styles', function () {
     const processors = [
         precss(),
         postcssAutomath(),
+        rfs({
+            baseValue: '.9rem',
+            breakpoint: 1500 // ganti juga di assets/bootstrap/_variables.css
+        }),
         autoprefixer({
             grid: true
         }),

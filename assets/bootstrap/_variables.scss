@@ -25,9 +25,13 @@ $grid-breakpoints: (
     sm: 576px,
     md: 768px,
     lg: 992px,
-    xl: 1200px,
+    xl: 1250px,
     xxl: 1300px,
 ) !default;
 
 /* Table */
 $table-accent-bg: $custom-grey;
+
+/* Settings */
+$enable-responsive-font-sizes: true !default;
+$rfs-breakpoint: 1500px !default; // ganti juga di gulp.js

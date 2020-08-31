@@ -6,6 +6,7 @@ $font-def: #474747;
 $font-grey: #747b84;
 $blue: #007bff !default;
 $black: #000 !default;
+$body-bg: #F7F6F7;
 
 /* Shadows */
 $container-shadow: 0 1px 1px 0 rgba(0, 0, 0, .15);
@@ -17,7 +18,7 @@ $box-shadow: 0 .5rem 1rem rgba($black, .06) !default;
     max-width: 35rem;
     input {
         border: 0;
-        padding: 1rem .8rem;
+        padding: rfs(1rem) .8rem;
         background: #FFF;
         letter-spacing: .07rem;
         &::placeholder {
@@ -32,6 +33,11 @@ $box-shadow: 0 .5rem 1rem rgba($black, .06) !default;
     .btn {
         font-size: 1rem;
         text-transform: inherit;
+    }
+    @media all and (max-width: 1152px) {
+        input {
+            padding: .7rem .8rem;
+        }
     }
 }
 

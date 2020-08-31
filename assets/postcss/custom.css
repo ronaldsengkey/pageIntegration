@@ -1,8 +1,12 @@
 @import '../variables';
 
 body {
-    background: #F7F6F7;
+    background: $body-bg;
     letter-spacing: .02rem;
+}
+
+.bg-body {
+    background: $body-bg;
 }
 
 .container {
@@ -36,6 +40,12 @@ ol#breadcrumbData {
 
 .link {
     @include link;
+}
+
+.btn-circle {
+    font-size: 1rem;
+    width: 2.3rem;
+    height: @width;
 }
 
 .classic-tabs {
@@ -399,12 +409,22 @@ ul.nav-tabs {
     @include form-auth;
     .title-text {
         h1 {
-            font-size: 2.7rem;
+            font-size: rfs(2.7rem);
             font-family: 'Playfair Display', serif;
         }
     }    
     .title-img {
         display: none;
+    }    
+}
+
+@media all and (max-width: 1152px) {
+    .container-login {
+        .title-text {
+            h1 {
+                font-size: 2rem;
+            }
+        }    
     }    
 }
 
@@ -431,7 +451,7 @@ ul.navbar-nav {
     background: linear-gradient(40deg, #ffd86f, #fc6262);
     h1 {
         font-family: 'Playfair Display', serif;
-        font-size: 3.4rem;
+        font-size: rfs(3.4rem);
     }
     h5 {
         letter-spacing: .05rem;
@@ -455,6 +475,15 @@ ul.navbar-nav {
         transform: translate(15%, -50%);
     }
 }
+@media all and (max-width: 1250px) {
+    .landing-left {
+        .main-img {
+            width: auto;
+            max-width: 100%;
+            transform: translate(0, -50%);
+        }
+    }    
+}
 
 .profile-avatar {
     .avatar {
@@ -462,5 +491,11 @@ ul.navbar-nav {
         height: @width;
         font-weight: bold;
         font-size: 1.4rem;
+    }
+}
+
+.forgot {
+    .btn-forgot {
+        font-size: .9rem;
     }
 }

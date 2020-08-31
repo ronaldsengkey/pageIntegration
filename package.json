@@ -48,6 +48,7 @@
         "redis": "^2.8.0",
         "redux": "^4.0.4",
         "request": "^2.88.0",
+        "rfs": "^9.0.3",
         "sass": "^1.26.10",
         "socket.io": "^2.3.0",
         "socket.io-client": "^2.3.0",
