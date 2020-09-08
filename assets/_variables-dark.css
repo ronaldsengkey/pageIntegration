@@ -2,15 +2,15 @@
 $orange-ultipay: #ff8a00;
 $custom-grey: #f0f0f0;
 $custom-grey-text: #666666;
-$font-def: #474747;
+$font-def: #fff;
 $font-grey: #747b84;
 $blue: #007bff !default;
 $black: #000 !default;
-$body-bg: #F7F6F7;
+$body-bg: #212529;
 $body-bg2: #2D3136;
-$color-placeholder: rgba(0, 0, 0, .5);
-$color-placeholder-focus: rgba(0, 0, 0, .75);
-$bg-nav-link: #FFF;
+$color-placeholder: rgba(255, 255, 255, .5);
+$color-placeholder-focus: rgba(255, 255, 255, .75);
+$bg-nav-link: $body-bg2;
 
 /* Shadows */
 $container-shadow: 0 1px 1px 0 rgba(0, 0, 0, .15);

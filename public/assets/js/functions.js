@@ -22,3 +22,28 @@ function loadingInline() {
     </div>`;
     $('.container-login').html(loading);
 }
+
+async function getContent(url) {
+    return new Promise (async function (resolve, reject) {
+        $.ajax({
+            url: url,
+            crossDomain: true,
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "*/*",
+                "Cache-Control": "no-cache"
+            },
+            success: function (callback) {
+                if (callback.indexOf('clouds') > -1) {
+                    reject(404);
+                } else {
+                    resolve(callback);
+                }
+            },
+            error: function(error) {
+                reject(error);
+            }
+        })
+    })
+}

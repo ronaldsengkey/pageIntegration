@@ -1091,7 +1091,7 @@
   background-color: #424242 !important; }
 
 .grey.darken-4 {
-  background-color: #474747 !important; }
+  background-color: #fff !important; }
 
 .black {
   background-color: #000 !important; }
@@ -1421,15 +1421,15 @@ button.bg-secondary:focus {
   border-color: #a6c !important; }
 
 .bg-dark {
-  background-color: #474747 !important; }
+  background-color: #fff !important; }
 
 a.bg-dark:hover, a.bg-dark:focus,
 button.bg-dark:hover,
 button.bg-dark:focus {
-  background-color: #2e2e2e !important; }
+  background-color: #e6e6e6 !important; }
 
 .border-dark {
-  border-color: #474747 !important; }
+  border-color: #fff !important; }
 
 .bg-light {
   background-color: #e0e0e0 !important; }
@@ -1608,10 +1608,10 @@ a.text-secondary:hover, a.text-secondary:focus {
   color: #9540bf !important; }
 
 .text-dark {
-  color: #474747 !important; }
+  color: #fff !important; }
 
 a.text-dark:hover, a.text-dark:focus {
-  color: #2e2e2e !important; }
+  color: #e6e6e6 !important; }
 
 .text-light {
   color: #e0e0e0 !important; }
@@ -4576,52 +4576,52 @@ table.table a.btn.btn-blue-grey {
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
 
 .btn-dark {
-  color: #fff;
-  background-color: #474747 !important; }
+  color: #000;
+  background-color: #fff !important; }
   .btn-dark:hover {
-    color: #fff;
-    background-color: #545454; }
+    color: #000;
+    background-color: white; }
   .btn-dark:focus, .btn-dark.focus {
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
   .btn-dark:focus, .btn-dark:active, .btn-dark.active {
-    background-color: #141414; }
+    background-color: #cccccc; }
   .btn-dark.dropdown-toggle {
-    background-color: #474747 !important; }
+    background-color: #fff !important; }
     .btn-dark.dropdown-toggle:hover, .btn-dark.dropdown-toggle:focus {
-      background-color: #545454 !important; }
+      background-color: white !important; }
   .btn-dark:not([disabled]):not(.disabled):active, .btn-dark:not([disabled]):not(.disabled).active,
   .show > .btn-dark.dropdown-toggle {
-    background-color: #141414 !important;
+    background-color: #cccccc !important;
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
   .btn-dark:not([disabled]):not(.disabled):active:focus, .btn-dark:not([disabled]):not(.disabled).active:focus,
   .show > .btn-dark.dropdown-toggle:focus {
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
 
 .dark-ic {
-  color: #474747 !important; }
+  color: #fff !important; }
   .dark-ic:hover, .dark-ic:focus {
-    color: #474747; }
+    color: #fff; }
 
 a.btn:not([href]):not([tabindex]),
 a.btn:not([href]):not([tabindex]):focus,
 a.btn:not([href]):not([tabindex]):hover {
-  color: #fff; }
+  color: #000; }
 
 table.table a.btn.btn-dark {
-  color: #fff; }
+  color: #000; }
 
 .btn-outline-dark {
-  color: #474747 !important;
+  color: #fff !important;
   background-color: transparent !important;
-  border: 2px solid #474747 !important; }
+  border: 2px solid #fff !important; }
   .btn-outline-dark:hover, .btn-outline-dark:focus, .btn-outline-dark:active, .btn-outline-dark:active:focus, .btn-outline-dark.active {
-    color: #474747 !important;
+    color: #fff !important;
     background-color: transparent !important;
-    border-color: #474747 !important; }
+    border-color: #fff !important; }
   .btn-outline-dark:not([disabled]):not(.disabled):active, .btn-outline-dark:not([disabled]):not(.disabled).active,
   .show > .btn-outline-dark.dropdown-toggle {
     background-color: transparent !important;
-    border-color: #474747 !important;
+    border-color: #fff !important;
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
   .btn-outline-dark:not([disabled]):not(.disabled):active:focus, .btn-outline-dark:not([disabled]):not(.disabled).active:focus,
   .show > .btn-outline-dark.dropdown-toggle:focus {
@@ -5114,8 +5114,8 @@ table.table a.btn.btn-black {
   background-color: #a6c !important; }
 
 .badge-dark {
-  color: #fff !important;
-  background-color: #474747 !important; }
+  color: #000 !important;
+  background-color: #fff !important; }
 
 .badge-light {
   color: #000 !important;

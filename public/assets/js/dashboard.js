@@ -1,14 +1,19 @@
 $(async function() {
-    var currentUser = localStorage.getItem('userData');
+    var currentUser = parseUserData();
     if (currentUser) {
-        var currentUser = parseUserData(parseUserData(currentUser));
         console.log('Already Sign-in', currentUser);
-        sayHello(currentUser.name);
+        dashboard();
     } else {
         console.log('Login First');
         location.href = '/';
     };
 })
+
+function dashboard() {
+    var currentUser = parseUserData();
+    getPage('index');
+    sayHello(currentUser.name);
+}
 
 function sayHello(name) {
     var myDate = new Date();
@@ -21,12 +26,23 @@ function sayHello(name) {
         greet = 'Good afternoon,';
     else if (hrs >= 17 && hrs <= 24)
         greet = 'Good evening,';
-    $('.greeting .currentGreet').html(greet);
+    $('.greeting .currentGreet').html(greet).show();
     $('.greeting .currentName').html(name +'!');
+    $('.greeting button').hide();
 }
 
-function parseUserData(data) {
-    var dataUser = JSON.parse(data);
+async function getPage(target) {
+    loadingActivated();
+    const targetDashboard = 'dashboard/'+ target;
+    let content = await getContent(targetDashboard);
+    $('#mainContent').html(content);
+    loadingDeactivated();
+}
+
+function parseUserData() {
+    var currentUser = localStorage.getItem('userData');
+    var dataUser = JSON.parse(currentUser);
+    var dataUser = JSON.parse(dataUser);
     return dataUser;
 }
 

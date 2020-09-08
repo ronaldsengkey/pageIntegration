@@ -106,6 +106,14 @@ fastify.get('/dashboard', function (req, reply) {
     reply.sendFile('layouts/dashboard/layout.html')
 })
 
+fastify.get('/dashboard/index', function (req, reply) {
+    reply.sendFile('layouts/dashboard/index.html')
+})
+
+fastify.get('/dashboard/preferences', function (req, reply) {
+    reply.sendFile('layouts/dashboard/preferences.html')
+})
+
 fastify.get('/getSession', function (req, reply) {
     let idEmployee = req.headers.for;
     client.get('originLogin' + idEmployee, function (err, result) {

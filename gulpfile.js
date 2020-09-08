@@ -28,7 +28,7 @@ gulp.task('styles', function () {
         cssNano()
     ];
    
-    return gulp.src(['assets/postcss/custom.css', 'assets/postcss/ext_custom.css', 'assets/postcss/ultipay_button.css', 'assets/postcss/chat.css'])
+    return gulp.src(['assets/postcss/custom.css', 'assets/postcss/custom-dark.css', 'assets/postcss/ext_custom.css', 'assets/postcss/ultipay_button.css', 'assets/postcss/chat.css'])
     .pipe(postcss(processors))
     .pipe(notify('success'))
     .pipe(gulp.dest('public/assets/css'))
@@ -39,7 +39,7 @@ gulp.task('styles', function () {
 });
 
 gulp.task('bootstrap', function () {
-    return gulp.src('assets/bootstrap/bootstrap.scss')
+    return gulp.src(['assets/bootstrap/bootstrap.scss', 'assets/bootstrap/bootstrap-dark.scss'])
     .pipe(sass().on('error', sass.logError))
     .pipe(notify('success'))
     .pipe(gulp.dest('public/assets/css'))
@@ -50,7 +50,7 @@ gulp.task('bootstrap', function () {
 });
 
 gulp.task('mdbootstrap', function () {
-    return gulp.src('assets/mdbootstrap/mdbootstrap.scss')
+    return gulp.src(['assets/mdbootstrap/mdbootstrap.scss', 'assets/mdbootstrap/mdbootstrap-dark.scss'])
     .pipe(sass().on('error', sass.logError))
     .pipe(notify('success'))
     .pipe(gulp.dest('public/assets/css'))

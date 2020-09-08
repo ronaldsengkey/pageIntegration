@@ -1,0 +1,41 @@
+/* Mixin */
+@mixin form-auth {
+    width: 100%;
+    max-width: 35rem;
+    input {
+        border: 0;
+        padding: rfs(1rem) .8rem;
+        background: $body-bg2;
+        letter-spacing: .07rem;
+        color: $font-def;
+        &::placeholder {
+            color: $color-placeholder;
+        }
+        &:focus {
+            &::placeholder {
+                color: $color-placeholder-focus;
+            }
+        }
+    }
+    .btn {
+        font-size: 1rem;
+        text-transform: inherit;
+    }
+    @media all and (max-width: 1152px) {
+        input {
+            padding: .7rem .8rem;
+        }
+    }
+}
+
+@mixin cursor-pointer {
+    cursor: pointer;
+}
+
+@mixin link {
+    color: $blue;
+    &:hover {
+        color: darken($blue, 15%);
+        text-decoration: underline;
+    }
+}

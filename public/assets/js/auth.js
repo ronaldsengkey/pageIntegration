@@ -38,7 +38,7 @@ $(async function() {
     });
 })
 
-async function getPage(button) {
+async function getPageAuth(button) {
     loadingInline();
     const target = button === 'register' ? 'register' : !$(button).data('target') ? 'login' : $(button).data('target');
     console.log('target', target);
@@ -59,31 +59,6 @@ function successAuth(callbackData) {
     callbackData.origin = 'browser';
     localStorage.setItem('userData', JSON.stringify(callbackData));
     window.location = 'dashboard';
-}
-
-async function getContent(url) {
-    return new Promise (async function (resolve, reject) {
-        $.ajax({
-            url: url,
-            crossDomain: true,
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "*/*",
-                "Cache-Control": "no-cache"
-            },
-            success: function (callback) {
-                if (callback.indexOf('clouds') > -1) {
-                    reject(404);
-                } else {
-                    resolve(callback);
-                }
-            },
-            error: function(error) {
-                reject(error);
-            }
-        })
-    })
 }
 
 async function authAjax(data, parameter) {
